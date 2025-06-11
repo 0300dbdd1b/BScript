@@ -1,4 +1,4 @@
-#include "include/ScriptInterpreter.h"
+#include "include/script-interpreter.h"
 #include "include/opcodes.h"
 
 #include <string.h>
@@ -480,10 +480,26 @@ void ExecuteOpcodes(ScriptInterpreter *env)
 		case OP_EQUAL			:	OpEqual(env);											break;
 		case OP_EQUALVERIFY		:	OpEqual(env); OpVerify(env); env->executedByteCount--;	break;
 		case OP_RETURN			:	/* Implemented in OP_RETURN conditions */				break;
-		case OP_DROP			:	OpDrop(env);											break;
-		case OP_DUP				:	OpDup(env);												break;
+
+		/* --- STACK OPERATORS --- */
 		case OP_TOALTSTACK		:	OpToAltStack(env);										break;
 		case OP_FROMALTSTACK	:	OpFromAltStack(env);									break;
+		case OP_2DROP			:															break;
+		case OP_2DUP			:															break;
+		case OP_3DUP			:															break;
+		case OP_2OVER			:															break;
+		case OP_2ROT			:															break;
+		case OP_2SWAP			:															break;
+		case OP_DROP			:	OpDrop(env);											break;
+		case OP_DUP				:	OpDup(env);												break;
+		case OP_NIP				:															break;
+		case OP_OVER			:															break;
+		case OP_ROLL			:															break;
+		case OP_ROT				:															break;
+		case OP_SWAP			:															break;
+		case OP_TUCK			:															break;
+
+		case OP_PICK			:															break;
 		case OP_DEPTH			:	OpDepth(env);											break;
 		default					:	printf("Error: Unsupported Opcode\n");
 	}

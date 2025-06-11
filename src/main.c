@@ -1,5 +1,5 @@
 
-#include "include/ScriptInterpreter.h"
+#include "include/script-interpreter.h"
 #include "include/opcodes.h"
 
 int main(int argc, char **argv)

@@ -1,4 +1,4 @@
-#include "include/ScriptInterpreter.h"
+#include "include/script-interpreter.h"
 
 const char *GetScriptStatusName(SCRIPT_STATUS status)
 {

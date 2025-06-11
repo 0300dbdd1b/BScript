@@ -1,4 +1,4 @@
-#include "include/ScriptInterpreter.h"
+#include "include/script-interpreter.h"
 #include "include/opcodes.h"
 #include "include/platform.h"
 #include <string.h>
